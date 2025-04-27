@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very-dark-blue-main-BG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-container{
+    background-color: var(--Very-dark-blue-card-BG);
+    width: 18%;
+    height: 70%;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px var(--Very-dark-blue-line); 
+}
+.card-image {
+    width: 100%;
+    height: 55%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 90%;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+
+.card-details .title {
+    font-size: 1rem;
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
+.card-details .description {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--Soft-blue);
+    margin-bottom: 0.5rem;
+}
+
+.card-details .price-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-details .price-date .price , .card-details .price-date .date {
+    display: flex;
+}
+
+.card-details .price-date .price p {
+    color: var(--Cyan);
+    margin-left: 0.7rem;
+    font-size: 0.8rem;
+}
+
+.card-details .price-date .date p {
+    color: var(--Soft-blue);
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+}
+
+
+hr {
+    border: 0.5px solid var(--Very-dark-blue-line);
+    margin: 1rem 0;
+}
+
+.owner{
+    display: flex;
+}
+
+.owner  img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+}
+
+.owner p {
+    color: var(--Soft-blue);
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+.owner p span {
+    color: var(--White);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-container{
+        width: 30%;
+        height: 80%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .main-container{
+        width: 40%;
+        height: 80%;
+    }
+    .card-image {
+        height: 50%;
+    }   
+
+    
+}
+
+@media (max-width: 426px) {
+    .main-container {
+        width: 90%;
+        height: 80%;
+    }
+    .card-image img {
+        height: 100%;
+    }
+    .card-details .title {
+        font-size: 1.2rem;
+    }
+    .card-details .description {
+        font-size: 0.9rem;
+    }
+    .card-details .price-date .price p, .card-details .price-date .date p {
+        font-size: 0.9rem;
+    }
+}
+
+
